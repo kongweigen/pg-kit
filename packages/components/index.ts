@@ -1,4 +1,2 @@
-import { testFun } from '@pg-ui/utils'
-import { Button } from './src/index'
-
-export { Button }
+export * from './button'
+export * from './tag'

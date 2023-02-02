@@ -1,22 +1,12 @@
 {
-  "name": "@pg-ui/ui",
+  "name": "@pg-kit/components",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
-  "module": "index.ts",
-  "scripts": {
-    "build": "vite build"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@pg-ui/utils": "workspace:*"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^3.1.0",
-    "typescript": "^4.5.4",
-    "vite": "^3.1.0",
-    "vue-tsc": "^0.34.7"
+    "vue": "^3.2.45"
   }
 }

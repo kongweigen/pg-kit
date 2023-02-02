@@ -1,11 +1,10 @@
 {
-  "name": "@pg-ui/utils",
+  "name": "@pg-kit/utils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
-  "module": "index.ts",
+  "main": "index.js",
   "scripts": {
-    "build": "vite build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
