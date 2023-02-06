@@ -1,13 +1,14 @@
 {
   "name": "pg-kit",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "main": "./dist/ui.umd.js",
   "module": "./dist/ui.es.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "lint": "tsc"
   },
   "devDependencies": {
     "typescript": "^4.9.4",

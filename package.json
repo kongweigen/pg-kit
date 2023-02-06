@@ -1,11 +1,10 @@
 {
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "组件库",
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "kongweigen",
+  "license": "ISC",
+  "devDependencies": {
+    "turbo": "^1.7.3"
+  }
 }

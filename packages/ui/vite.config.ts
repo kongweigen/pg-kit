@@ -2,7 +2,7 @@
  * @Author: kongweigen 421505648@qq.com
  * @Date: 2023-02-02 21:31:50
  * @LastEditors: kongweigen 421505648@qq.com
- * @LastEditTime: 2023-02-02 21:32:51
+ * @LastEditTime: 2023-02-02 22:47:43
  * @FilePath: \webpack-learne:\webProject\Monerepo\pg-kit\packages\ui\vite.config.ts
  * @Description:
  *
