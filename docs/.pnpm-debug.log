@@ -1,0 +1,24 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1,
+    "workspacePrefix": "E:\\webProject\\Monerepo\\pg-kit"
+  },
+  "1 info pnpm": {
+    "err": {
+      "name": "Error",
+      "message": "not found: niit",
+      "code": "ENOENT",
+      "stack": "Error: not found: niit\n    at getNotFoundError (E:\\dev\\Programs\\nvm\\v16.14.0\\node_modules\\pnpm\\dist\\pnpm.cjs:41517:51)\n    at Function.whichSync [as sync] (E:\\dev\\Programs\\nvm\\v16.14.0\\node_modules\\pnpm\\dist\\pnpm.cjs:41594:13)\n    at getCommandAbsolutePathSync (E:\\dev\\Programs\\nvm\\v16.14.0\\node_modules\\pnpm\\dist\\pnpm.cjs:43159:44)\n    at default_1 (E:\\dev\\Programs\\nvm\\v16.14.0\\node_modules\\pnpm\\dist\\pnpm.cjs:43168:32)\n    at E:\\dev\\Programs\\nvm\\v16.14.0\\node_modules\\pnpm\\dist\\pnpm.cjs:171981:39"
+    }
+  },
+  "2 error pnpm": {
+    "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
+    "prefix": "E:\\webProject\\Monerepo\\pg-kit",
+    "err": {
+      "name": "pnpm",
+      "message": "not found: niit",
+      "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
+      "stack": "Error: not found: niit\n    at getNotFoundError (E:\\dev\\Programs\\nvm\\v16.14.0\\node_modules\\pnpm\\dist\\pnpm.cjs:41517:51)\n    at Function.whichSync [as sync] (E:\\dev\\Programs\\nvm\\v16.14.0\\node_modules\\pnpm\\dist\\pnpm.cjs:41594:13)\n    at getCommandAbsolutePathSync (E:\\dev\\Programs\\nvm\\v16.14.0\\node_modules\\pnpm\\dist\\pnpm.cjs:43159:44)\n    at default_1 (E:\\dev\\Programs\\nvm\\v16.14.0\\node_modules\\pnpm\\dist\\pnpm.cjs:43168:32)\n    at E:\\dev\\Programs\\nvm\\v16.14.0\\node_modules\\pnpm\\dist\\pnpm.cjs:171981:39"
+    }
+  }
+}

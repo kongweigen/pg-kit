@@ -12,5 +12,5 @@ Entry module "index.ts" is using named and default exports together. Consumers o
 [2mdist/[22m[36mui.umd.js  [39m[1m[2m31.00 kB[22m[1m[22m[2m │ gzip: 12.10 kB[22m
 
 [vite:dts] Start generate declaration files...
-[vite:dts] Declaration files built in 1827ms.
+[vite:dts] Declaration files built in 1756ms.
 

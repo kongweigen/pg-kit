@@ -1,0 +1,16 @@
+.pg-button + .pg-button {
+  margin-left: 12px;
+}
+.pg-button {
+  border-radius: 8px;
+  padding: 8px 15px;
+  &.pg-button--primary {
+    background-color: #409eff;
+  }
+  &.pg-button--success {
+    background-color: #67c23a;
+  }
+  &.pg-button--danger {
+    background-color: #f56c6c;
+  }
+}

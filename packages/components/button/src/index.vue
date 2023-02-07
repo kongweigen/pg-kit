@@ -1,19 +1,28 @@
-<!--
- * @Author: kongweigen 421505648@qq.com
- * @Date: 2023-02-02 22:43:20
- * @LastEditors: kongweigen 421505648@qq.com
- * @LastEditTime: 2023-02-06 22:07:45
- * @FilePath: \webpack-learne:\webProject\Monerepo\pg-kit\packages\components\button\src\index.vue
- * @Description: 
- * 
- * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
--->
 <template>
-  <button>我是按钮</button>
+  <button ref="_ref" :class="['pg-button', 'pg-button--' + type]">
+    <slot></slot>
+  </button>
 </template>
 <script setup lang="ts">
-// import { onMounted } from 'vue'
-// onMounted(() => {
-//   console.log('onMounted')
-// })
+import { ref } from 'vue'
+type ButtonTypes =
+  | 'default'
+  | 'primary'
+  | 'success'
+  | 'warning'
+  | 'info'
+  | 'danger'
+  | 'text'
+
+defineProps<{
+  loading: Boolean
+  disabled: Boolean
+  type: ButtonTypes
+}>()
+
+const _ref = ref<HTMLButtonElement>()
+defineExpose({
+  ref: _ref
+})
 </script>
+<style lang="scss" scoped></style>
