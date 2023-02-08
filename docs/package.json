@@ -12,7 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "pg-kit": "workspace:^1.0.0",
     "vitepress": "1.0.0-alpha.45",
+    "vitepress-theme-demoblock": "^2.0.1",
     "vue": "^3.2.45"
   }
 }

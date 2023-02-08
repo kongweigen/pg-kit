@@ -2,8 +2,10 @@
   margin-left: 12px;
 }
 .pg-button {
+  border: 1px solid #c6e2ff;
   border-radius: 8px;
   padding: 8px 15px;
+  line-height: 14px;
   &.pg-button--primary {
     background-color: #409eff;
   }
