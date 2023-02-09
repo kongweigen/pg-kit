@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import { demoBlockPlugin } from 'vitepress-theme-demoblock'
 
 export default defineConfig({
+  base: '/pg-kit/',
   title: 'pg-kit 文档',
   layout: 'home',
   themeConfig: {

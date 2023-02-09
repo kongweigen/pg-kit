@@ -9,10 +9,7 @@ type ButtonTypes =
   | 'default'
   | 'primary'
   | 'success'
-  | 'warning'
-  | 'info'
   | 'danger'
-  | 'text'
 
 defineProps<{
   loading: Boolean
