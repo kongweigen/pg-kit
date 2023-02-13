@@ -8,7 +8,9 @@
  * 
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
 -->
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import UnoTest from './components/uno-test/index.vue'
+</script>
 
 <template>
   <div>
@@ -17,6 +19,7 @@
     <pg-button type="success">Success</pg-button>
     <pg-button type="danger">Danger</pg-button>
     <pg-tag></pg-tag>
+    <UnoTest></UnoTest>
   </div>
 </template>
 
