@@ -1,0 +1,31 @@
+{
+  "name": "@pg/cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bin/index.js",
+  "type": "module",
+  "bin": {
+    "create-tpl": "./bin/index.js"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "tsc"
+  },
+  "files": [
+    "index.js",
+    "template-*",
+    "dist"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk-animation": "2.0.2",
+    "clear": "0.1.0",
+    "figlet": "1.5.2",
+    "prompts": "^2.4.2",
+    "vite": "^4.0.4",
+    "kolorist": "^1.6.0"
+  }
+}
