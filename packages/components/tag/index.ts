@@ -1,8 +1,12 @@
 import { App, Plugin } from 'vue'
-import Tag from './src/index.vue'
+import PgTag from './src/index.vue'
 
-export const PgTag: Plugin = {
+const TagInstall: Plugin = {
   install(app: App) {
-    app.component('pg-tag', Tag)
+    app.component('pg-tag', PgTag)
   }
 }
+
+export default TagInstall
+
+export { PgTag }

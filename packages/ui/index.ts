@@ -13,7 +13,7 @@ import { PgTag } from '@pg-kit/components/tag'
 import Components from './components'
 import { App } from 'vue'
 import 'uno.css'
-import './styles/button.scss'
+import './styles/index.scss'
 
 const Installer = {
   install(app: App) {

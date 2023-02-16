@@ -7,15 +7,9 @@
   "bin": {
     "create-tpl": "./bin/index.js"
   },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "tsc"
-  },
   "files": [
-    "index.js",
-    "template-*",
-    "dist"
+    "./bin/index.js",
+    "template-*"
   ],
   "keywords": [],
   "author": "",
@@ -24,8 +18,8 @@
     "chalk-animation": "2.0.2",
     "clear": "0.1.0",
     "figlet": "1.5.2",
+    "kolorist": "^1.6.0",
     "prompts": "^2.4.2",
-    "vite": "^4.0.4",
-    "kolorist": "^1.6.0"
+    "vite": "^4.0.4"
   }
 }

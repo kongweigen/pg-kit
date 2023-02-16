@@ -1,8 +1,11 @@
 import { App, Plugin } from 'vue'
-import Button from './src/index.vue'
+import PgButton from './src/index.vue'
 
-export const PgButton: Plugin = {
+const ButtonInstall: Plugin = {
   install(app: App) {
-    app.component('pg-button', Button)
+    app.component('pg-button', PgButton)
   }
 }
+
+export default ButtonInstall
+export { PgButton }

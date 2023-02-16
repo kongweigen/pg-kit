@@ -15,11 +15,10 @@ import UnoTest from './components/uno-test/index.vue'
 <template>
   <div>
     <pg-button>Default</pg-button>
+    <pg-button color="yellow">Primary</pg-button>
     <pg-button type="primary">Primary</pg-button>
     <pg-button type="success">Success</pg-button>
     <pg-button type="danger">Danger</pg-button>
-    <pg-tag></pg-tag>
-    <UnoTest></UnoTest>
   </div>
 </template>
 
