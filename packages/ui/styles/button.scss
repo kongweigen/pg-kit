@@ -2,11 +2,6 @@
   margin-left: 12px;
 }
 .pg-button {
-  border-radius: 8px;
-  line-height: 14px;
-  &.has-color {
-  }
-  &:hover {
-    opacity: 0.7;
-  }
+  border: none;
+  font-size: 14px;
 }

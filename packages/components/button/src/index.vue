@@ -3,22 +3,25 @@
     ref="_ref"
     :class="[
       'pg-button',
-      `${_color ? 'has-color' : ''}`,
       `bg-${_color}-500`,
-      'py-2'
+      `hover:bg-${_color}-400`,
+      `${roundClass}`,
+      'cursor-pointer',
+      'py-2 px-3'
     ]"
   >
     <slot></slot>
   </button>
 </template>
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, computed } from 'vue'
 type ButtonTypes = 'default' | 'primary' | 'success' | 'danger'
 
 const props = withDefaults(
   defineProps<{
-    loading?: boolean
-    disabled?: boolean
+    loading?: boolean // 是否为加载状态
+    disabled?: boolean // 按钮是否为禁用
+    round?: boolean // 是否圆角
     type?: ButtonTypes
     color?: string
   }>(),
@@ -26,10 +29,12 @@ const props = withDefaults(
     loading: false,
     disabled: false,
     type: 'default',
-    color: ''
+    color: '',
+    round: false
   }
 )
 
+const roundClass = computed(() => (props.round ? 'rd-4' : 'rd-1'))
 const _ref = ref<HTMLButtonElement>()
 const _color = ref('')
 onMounted(() => {
@@ -41,7 +46,7 @@ onMounted(() => {
       : props.type == 'danger'
       ? 'red'
       : ''
-  _color.value = _color.value || props.color
+  // _color.value = _color.value || props.color
 })
 defineExpose({
   ref: _ref
