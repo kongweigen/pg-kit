@@ -1,0 +1,27 @@
+{
+  "name": "@pg/cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bin/index.js",
+  "type": "module",
+  "bin": {
+    "create-tpl": "./bin/index.js"
+  },
+  "files": [
+    "./bin/index.js",
+    "template-*"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk-animation": "2.0.2",
+    "clear": "0.1.0",
+    "download-git-repo": "^3.0.2",
+    "figlet": "1.5.2",
+    "kolorist": "^1.6.0",
+    "ora": "^6.1.2",
+    "prompts": "^2.4.2",
+    "vite": "^4.0.4"
+  }
+}

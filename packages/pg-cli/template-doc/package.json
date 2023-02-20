@@ -2,7 +2,6 @@
   "name": "docs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "docs:dev": "vitepress dev docs --port 8080",
     "docs:build": "vitepress build docs",
@@ -12,13 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pg-kit": "workspace:^1.0.0",
     "vitepress": "1.0.0-alpha.45",
-    "vitepress-theme-demoblock": "^2.0.1",
     "vue": "^3.2.45"
-  },
-  "devDependencies": {
-    "@iconify-json/ic": "1.1.4",
-    "unocss": "0.45.6"
   }
 }
