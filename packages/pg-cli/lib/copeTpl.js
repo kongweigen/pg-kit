@@ -1,7 +1,9 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+// 终端输出颜色 blue,cyan,green,lightRed,magenta,red,reset,yellow
 
+import { green } from 'kolorist'
 export default function copeTpl(template) {
   const root = process.cwd()
   const renameFiles = {

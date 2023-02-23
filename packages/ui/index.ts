@@ -10,6 +10,8 @@
  */
 import { PgButton } from '@pg-kit/components/button'
 import { PgTag } from '@pg-kit/components/tag'
+import { PgSelect } from '@pg-kit/components/select'
+import { PgTooltip } from '@pg-kit/components/tooltip'
 import Components from './components'
 import { App } from 'vue'
 import 'uno.css'
@@ -24,4 +26,4 @@ const Installer = {
 }
 
 export default Installer
-export { PgButton, PgTag }
+export { PgButton, PgTag, PgSelect, PgTooltip }
