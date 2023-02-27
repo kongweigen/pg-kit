@@ -2,7 +2,7 @@
  * @Author: kongweigen 421505648@qq.com
  * @Date: 2023-02-22 22:05:05
  * @LastEditors: kongweigen 421505648@qq.com
- * @LastEditTime: 2023-02-23 23:16:11
+ * @LastEditTime: 2023-02-27 23:02:35
  * @FilePath: \pg-kit\packages\components\tooltip\src\index.vue
  * @Description: 
  * 
@@ -42,7 +42,7 @@ let clean = () => {}
 
 // 显示隐藏
 const trigger = async () => {
-  debugger
+  
   tooltipShow.value = !tooltipShow.value
   // 保证节点已经渲染
   await nextTick()
@@ -64,23 +64,27 @@ function updatePosition() {
         element: arrowRef.value
       })
     ]
-  }).then(({ x, y, middlewareData }) => {
+  }).then((res) => {
+    
+    let { x, y, placement, middlewareData } = res
     Object.assign(tooltipRef.value.style, {
       left: `${x}px`,
       top: `${y}px`
     })
     // 计算箭头位置
-    if (middlewareData.arrow) {
-      let ay = -arrowRef.value.offsetHeight / 2
-      if (y < 0) {
-        ay = -(y + arrowRef.value.offsetHeight + 5)
+    if (middlewareData.arrow && y) {
+      let halfArrowH = arrowRef.value.offsetHeight / 2
+      let ay = -halfArrowH
+      if (placement === 'bottom') {
       }
-      // const { x } = middlewareData.arrow
-      const { x, y } = middlewareData.arrow
+      if (placement === 'top') {
+        ay = tooltipRef.value.offsetHeight - halfArrowH
+      }
+      
+      const { x } = middlewareData.arrow
       Object.assign(arrowRef.value.style, {
         left: x != null ? `${x}px` : '',
-        top: y != null ? `${y}px` : ''
-        // top: `${ay}px`
+        top: `${ay}px`
       })
     }
   })
