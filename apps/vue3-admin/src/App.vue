@@ -2,7 +2,7 @@
  * @Author: kongweigen 421505648@qq.com
  * @Date: 2023-02-02 22:42:59
  * @LastEditors: kongweigen 421505648@qq.com
- * @LastEditTime: 2023-02-23 23:17:10
+ * @LastEditTime: 2023-03-02 22:24:03
  * @FilePath: \pg-kit\apps\vue3-admin\src\App.vue
  * @Description: 
  * 
@@ -10,7 +10,6 @@
 -->
 <script setup lang="ts">
 import UnoTest from './components/uno-test/index.vue'
-import { PgSelect } from '../../../packages/components/select'
 </script>
 
 <template>

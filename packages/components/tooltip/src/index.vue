@@ -1,18 +1,9 @@
-<!--
- * @Author: kongweigen 421505648@qq.com
- * @Date: 2023-02-22 22:05:05
- * @LastEditors: kongweigen 421505648@qq.com
- * @LastEditTime: 2023-02-27 23:02:35
- * @FilePath: \pg-kit\packages\components\tooltip\src\index.vue
- * @Description: 
- * 
- * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
--->
 <template>
   <div>
     <div class="trigger" ref="triggerRef" @click="trigger">
       <slot name="default"></slot>
     </div>
+
     <teleport to="body">
       <div v-show="tooltipShow" class="tooltip" ref="tooltipRef">
         <slot name="content"></slot>
@@ -27,6 +18,7 @@
 import { ref, nextTick } from 'vue'
 import {
   computePosition,
+  flip,
   autoPlacement,
   autoUpdate,
   arrow,
@@ -42,10 +34,9 @@ let clean = () => {}
 
 // 显示隐藏
 const trigger = async () => {
-  
-  tooltipShow.value = !tooltipShow.value
-  // 保证节点已经渲染
+  tooltipShow.value = !tooltipShow.value // 保证节点已经渲染
   await nextTick()
+  debugger
   if (tooltipShow.value) {
     clean = autoUpdate(triggerRef.value, tooltipRef.value, updatePosition)
   } else {
@@ -57,36 +48,28 @@ function updatePosition() {
   computePosition(triggerRef.value, tooltipRef.value, {
     middleware: [
       offset(10),
-      autoPlacement({
-        allowedPlacements: ['top', 'bottom']
-      }),
+      flip(),
       arrow({
         element: arrowRef.value
       })
     ]
   }).then((res) => {
-    
+    debugger
     let { x, y, placement, middlewareData } = res
     Object.assign(tooltipRef.value.style, {
       left: `${x}px`,
       top: `${y}px`
+    }) // 箭头配置
+    debugger
+    const staticSide = {
+      top: 'bottom',
+      bottom: 'top'
+    }[placement]
+    arrowRef.value.style[placement] = 'unset'
+    Object.assign(arrowRef.value.style, {
+      left: x != null ? `${middlewareData.arrow.x}px` : '',
+      [staticSide]: `${-arrowRef.value.offsetWidth / 2}px`
     })
-    // 计算箭头位置
-    if (middlewareData.arrow && y) {
-      let halfArrowH = arrowRef.value.offsetHeight / 2
-      let ay = -halfArrowH
-      if (placement === 'bottom') {
-      }
-      if (placement === 'top') {
-        ay = tooltipRef.value.offsetHeight - halfArrowH
-      }
-      
-      const { x } = middlewareData.arrow
-      Object.assign(arrowRef.value.style, {
-        left: x != null ? `${x}px` : '',
-        top: `${ay}px`
-      })
-    }
   })
 }
 </script>
@@ -95,25 +78,28 @@ button {
   padding: 5px;
 }
 .trigger {
-  width: min-content;
+  width: 240px;
 }
 .tooltip {
-  background: #222;
+  background: #ffff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+  border: 1px solid #e4e7ed;
   color: white;
   font-weight: bold;
   padding: 5px;
   border-radius: 4px;
   font-size: 90%;
+  max-height: 274px;
 
   position: absolute;
-  width: 50px;
   top: 0;
+  width: 220px;
   left: 0;
   .arrow {
     position: absolute;
     width: 10px;
     height: 10px;
-    background: #222;
+    background: #ffff;
     transform: rotate(45deg);
   }
 }

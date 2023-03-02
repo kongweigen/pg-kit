@@ -2,7 +2,7 @@
  * @Author: kongweigen 421505648@qq.com
  * @Date: 2023-02-22 20:46:40
  * @LastEditors: kongweigen 421505648@qq.com
- * @LastEditTime: 2023-02-27 22:48:59
+ * @LastEditTime: 2023-03-02 23:19:48
  * @FilePath: \pg-kit\packages\components\select\src\index.vue
  * @Description: 
  * 
@@ -19,13 +19,13 @@
         </div>
       </template>
       <template #content>
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>3</li>
-          <li>3</li>
-        </ul>
+        <div class="pg-select-dropdown__wrap">
+          <ul>
+            <li v-for="i in 5" class="pg-select-dropdown__item">
+              <span>Option{{ i }}</span>
+            </li>
+          </ul>
+        </div>
       </template>
     </PgTooltip>
   </div>
@@ -34,6 +34,7 @@
 <script setup lang="ts">
 import { reactive, onMounted } from 'vue'
 import { PgTooltip } from '../../tooltip'
+const props = defineProps()
 </script>
 <style scoped lang="scss">
 .pg-select {
@@ -55,6 +56,27 @@ import { PgTooltip } from '../../tooltip'
       cursor: pointer;
     }
     input {
+    }
+  }
+}
+.pg-select-dropdown__wrap {
+  max-height: 274px;
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style: none;
+  }
+  .pg-select-dropdown__item {
+    color: #606266;
+    font-weight: 400;
+    padding: 0 32px 0 20px;
+    height: 34px;
+    line-height: 34px;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover {
+      background-color: #f5f7fa;
     }
   }
 }
