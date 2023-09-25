@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@slidev/cli": "^0.40.6",
+    "@slidev/theme-default": "^0.21.2",
     "pg-kit": "workspace:^1.0.0",
     "vue": "^3.2.45"
   },

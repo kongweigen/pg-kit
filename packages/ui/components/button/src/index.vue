@@ -3,26 +3,30 @@
     ref="_ref"
     :class="[
       'pg-button',
-      `bg-${_color}-500`,
-      `hover:bg-${_color}-400`,
       `${roundClass}`,
       'cursor-pointer',
-      'py-2 px-3'
+      'py-8px px-15px',
+      `bg-${_color}-500`,
+      `hover:bg-${_color}-400`
     ]"
+    @click="handleClick"
   >
     <slot></slot>
   </button>
 </template>
 <script setup lang="ts">
-import { onMounted, ref, computed } from 'vue'
-type ButtonTypes = 'default' | 'primary' | 'success' | 'danger'
+import { useButton } from './useButton'
 
+type TypeEnum = '' | 'default' | 'primary' | 'success' | 'danger'
+type SizeEnum = '' | 'small' | 'default' | 'large'
+const emit = defineEmits(['click'])
 const props = withDefaults(
   defineProps<{
     loading?: boolean // 是否为加载状态
     disabled?: boolean // 按钮是否为禁用
     round?: boolean // 是否圆角
-    type?: ButtonTypes
+    type?: TypeEnum
+    size?: SizeEnum
     color?: string
   }>(),
   {
@@ -34,20 +38,8 @@ const props = withDefaults(
   }
 )
 
-const roundClass = computed(() => (props.round ? 'rd-4' : 'rd-1'))
-const _ref = ref<HTMLButtonElement>()
-const _color = ref('')
-onMounted(() => {
-  _color.value =
-    props.type == 'primary'
-      ? 'blue'
-      : props.type == 'success'
-      ? 'green'
-      : props.type == 'danger'
-      ? 'red'
-      : ''
-  // _color.value = _color.value || props.color
-})
+const { _ref, _color, roundClass, handleClick } = useButton(props, emit)
+
 defineExpose({
   ref: _ref
 })
